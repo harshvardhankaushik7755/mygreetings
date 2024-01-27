@@ -1,8 +1,11 @@
 import json
 
 
-def countryInput(input):
-    print(input)
+def countryInput(input, country):
+    print(f"Welcome to {input.upper()}.. Capital of {country.upper()}..!!")
+    #welcome to paris.. capital of France..!!
+    #welcome to new delhi.. capital of india..!!
+    
     
 if __name__ == "__main__":
     with open("capitals.json", "r") as jsonfile:
@@ -15,7 +18,7 @@ if __name__ == "__main__":
             for country in keylist:
                 usercountry = userinputascountry.lower()
                 if country == usercountry:
-                    countryInput(data[usercountry])
+                    countryInput(data[usercountry],country)
                     checkey = True
                 else:
                     pass
